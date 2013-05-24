@@ -1,0 +1,17 @@
+[ 
+	{
+		"name" : "Home",
+		"id": "home",
+		"img" : "images/home.jpg"
+	}, 
+	{
+		"name" : "webrtc",
+		"id": "webrtc",
+		"img" : "images/webrtc.jpg"
+	},
+	{
+		"name" : "work",
+		"id": "work",
+		"img" : "images/work.jpg"
+	}
+]

@@ -1,0 +1,7 @@
+{
+    "websocketPort" : 1337,
+    "refreshRate" : 5000,
+    "roomCall" : true,
+    "acceptNewUsers" : true,
+    "sendRoster" : true
+}

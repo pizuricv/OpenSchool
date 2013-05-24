@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>WebRTC</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="js/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="js/jRating/jRating.jquery.css" type="text/css" />
+    
+    <style type="text/css">
+      body {
+        padding-top: 40px;
+        padding-bottom: 40px;
+      }
+
+      video {
+        width: 100%;
+        height: 100%;
+        float: left;
+      }
+
+      .sidebar-nav {
+        padding: 9px 0;
+      }
+
+      @media (max-width: 980px) {
+        /* Enable use of floated navbar text */
+        .navbar-text.pull-right {
+          float: none;
+          padding-left: 5px;
+          padding-right: 5px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+
+  <div id="main">
+    <div class="navbar navbar-inverse navbar-fixed-top"> 
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li id="teacher_id"><a href="#" onclick="showTeachers()"><i class="icon-user icon-white"></i> Leraar</a></li>
+              <li id="student_id"><a href="#" onclick="showStudents()"><i class="icon-user icon-white"></i> Leerjaar</a></li>
+              <li><a href="#" onclick="showRoom()"><i class="icon-facetime-video icon-white"></i> Mijn Klas</a></li>
+              <li><a href="#" onclick="showCursus()"><i class="icon-folder-open icon-white"></i> Cursus</a></li>
+              <li><a href="#" onclick="showCalendar()"><i class="icon-calendar icon-white"></i> Lessenrooster</a></li>
+            </ul>
+            <form id="form" class="navbar-form pull-right">
+              <input id="user" class="span2" type="text" placeholder="User name">
+              <button id="submit" type="submit" class="btn">Sign in</button>
+            </form>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container-fluid"> 
+      <div class="row-fluid">
+        <div id="people">
+          <div id="people_content">
+            <div class="carousel slide span6" id="myPeopleCarousel">
+              <div class="carousel-inner people-carousel"></div>
+              <a data-slide="prev" href="#myPeopleCarousel" class="left carousel-control">&lsaquo;</a>
+              <a data-slide="next" href="#myPeopleCarousel" class="right carousel-control">&rsaquo;</a>
+            </div>
+          </div>
+          <div id="people_bio" class="slide span4">
+          </div>
+          
+          <div class="thumbnail span2">
+            <video id="sourceSmallvid" autoplay></video>
+          </div>
+
+        </div><!--/people-->
+
+        <div id="rooms" class="span12">
+          <div id="room_content">
+            <div class="carousel slide span10" id="myRoomCarousel">
+              <div class="carousel-inner rooms-carousel"></div>
+              <a data-slide="prev" href="#myRoomCarousel" class="left carousel-control">&lsaquo;</a>
+              <a data-slide="next" href="#myRoomCarousel" class="right carousel-control">&rsaquo;</a>
+            </div>
+          </div>
+          <div class="inner"></div><!--/inner-->
+        </div><!--/room-->
+
+        <div id="cursus" class="span12">
+        </div><!--/cursus-->
+
+      </div><!--/row-->
+    </div><!--/.fluid-container-->
+  </div><!--/.main-->
+
+  <div id="acceptModal" class="modal hide fade">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+      <h3 id="callerTitle"></h3>
+    </div>
+    <div class="modal-body">
+      <p id="caller"></p>
+    </div>
+    <div class="modal-footer">
+      <a id="accept" href="#" class="btn btn-primary">Accept</a>
+      <a id="reject" href="#" class="btn">Decline</a>
+    </div>
+  </div>
+
+  <div id="userModal" class="modal hide fade">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+      <h3 id="userTitle"></h3>
+    </div>
+    <div class="modal-body">
+      <p id="callerUser"></p>
+    </div>
+    <div class="modal-footer">
+      <a id="acceptNewUser" href="#" class="btn btn-primary">Accept</a>
+      <a id="rejectNewUser" href="#" class="btn">Decline</a>
+    </div>
+  </div>
+
+
+    <!--<script src="http://code.jquery.com/jquery.js"></script> -->
+    <script src="js/jquery-1.7.2.min.js"></script>
+    <script src="js/bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/adapter.js"></script>
+    <script src="js/bandwidth.js"></script>
+    <script src="js/webrtc.js"></script>
+    <script src="js/signaling.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/jRating/jRating.jquery.js"></script>
+
+  </body>
+</html>

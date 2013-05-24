@@ -1,0 +1,68 @@
+[ 
+	{
+		"name" : "Veselin",
+		"id": "veselin",
+		"img" : "images/avatar.png",
+		"room" : ["work", "home", "webrtc"],
+		"bio" : "bio/veselin.html",
+		"rating": 19,
+		"role" : ["teacher", "admin"]
+	}, 
+	{
+		"name" : "Piet",
+		"id": "piet",
+		"img" : "images/piet.jpg",
+		"room" : ["work"],
+		"bio" : "bio/piet.html",
+		"rating": 18,
+		"role" : ["teacher"]
+	}, 
+	{
+		"name" : "Rob",
+		"id": "rob",
+		"img" : "images/rob.jpg",
+		"room" : ["work"],
+		"role" : ["teacher"]
+	}, 
+	{
+		"name" : "Pieter",
+		"id": "pieter",
+		"img" : "images/pieter.jpg",
+		"room" : ["work"],
+		"role" : ["student"]
+	}, 
+	{
+		"name" : "Andre",
+		"id": "andre",
+		"img" : "images/andre.jpg",
+		"room" : ["webrtc"]
+	}, 
+	{
+		"name" : "Jonas",
+		"id": "jonas",
+		"img" : "images/jonas.jpg",
+		"room" : ["work" , "webrtc"],
+		"role" : ["student"]
+	}, 
+	{
+		"name" : "Jo",
+		"id": "jo",
+		"img" : "images/jo.jpg",
+		"room" : ["work"],
+		"role" : ["student"]
+	}, 
+	{
+		"name" : "Nick",
+		"id": "nikola",
+		"img" : "images/nikola.jpg",
+		"room" : ["home"],
+		"role" : ["student"]
+	}, 
+	{
+		"name" : "Christof",
+		"id": "christof",
+		"img" : "images/christof.jpg",
+		"room" : ["work"],
+		"role" : ["student"]
+	}
+]
